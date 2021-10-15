@@ -1,1 +1,152 @@
+/* Banner and text */
+.banner {
+    background-color: darkcyan;
+    color: white;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.banner-text {
+    padding-left: 10px;
+    font-size:large;
+}
+
+
+/* Container with left and right panes */
+#flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Left pane with input fields, buttons, spotify playlist, calculator links, and pomodoro timer */
+#left-pane {
+    width: 20vw;
+    height: 100vh;
+    border-style: solid;
+    border-width: 10px;
+    margin-top: 5px;
+    border-right-width: 5px;
+    border-color: darkcyan;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    padding-left: 10px;
+}
+/* Input fields for channel and display name */
+.input-fields {
+    padding: 5px;
+    margin-top: 10px;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+}
+/* Join, leave, microphone, video, and share screen buttons */
+.button-group {
+    padding: 5px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkcyan;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Set color for when buttons are disabled */
+.button-group[disabled] {
+    background: rgb(118, 187, 195)
+}
+/* Spotify player */
+#spotify-player {
+    width: 250px;
+}
+#text-box {
+    width: 260px;
+    height: 20px;
+    background-color: darkcyan;
+    color: white;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    font-size:medium;
+}
+/* Links for scientific and graphing calculators */
+.calculator-link {
+    color: darkcyan;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Pomodoro timer */
+#pomodoro-container{
+    border:1px solid #333;
+    border-radius :20px;
+    width:200px;
+    margin:20px auto;
+    padding:20px;
+    text-align:center;
+    background: darkcyan;
+    height: 250px;
+}
+#timer{ 
+    color:white; 
+    font-size:20px; 
+    margin:10px auto;
+    border : 5px solid white;
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    overflow:hidden;
+    position:relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;
+}
+#time{
+    margin-top:37px;
+    z-index : 1;
+    position:relative;
+}
+#filler{
+    background : #ddffcc;
+    height: 0px;
+    width: 200px;
+    position:absolute;
+    bottom:0;
+}
+.pomodoro-button { 
+    background:white; 
+    border:none; 
+    color:darkcyan; 
+    cursor:pointer; 
+    padding:5px; 
+    width:90px; 
+    margin:10px auto;
+    font-size:14px;
+    height : 25px;
+    border-radius : 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Right pane with video players */
+#video-pane {
+    width: 80vw;
+    height: 100vh;
+    border-style: solid;
+    border-width: 10px;
+    border-left-width: 5px;
+    margin-top: 5px;
+    border-color: darkcyan;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    padding-left: 10px;
+    display: flex;
+    flex-direction:column;
+}
+.player {
+    width: 480px;
+    height: 320px;
+}
 

@@ -1,1 +1,95 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agora Final Deliverable</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="banner">
+        <p class="banner-text">Welcome to Your Video Study Session!</p>
+    </div>
+    <div id="flex-container">
+        <!-- Left pane with input fields, buttons, spotify playlist, calculator links, and pomodoro timer */ -->
+        <div id="left-pane">
+            <div>
+                <form id="join-form">
+                    <!-- Gets name of channel and display name from user -->
+                    <input type="text" class="input-fields" required class="form-control" id="channel-name" placeholder="Enter channel name"/>
+                    <input type="text" class="input-fields" id="display-name" placeholder="Enter username you wish to be displayed"/>
+                    <div>
+                        <!-- Join, leave, mic, video, and share screen buttons -->
+                        <button class="button-group" id="join" type="submit">Join</button>
+                        <button class="button-group" id="leave" type="button" disabled>Leave</button>
+                        <br/>
+                        <button class="button-group" id="mic-btn" type="button" disabled>Mute Audio</button>
+                        <button class="button-group" id="video-btn" type="button" disabled>Turn Video Off</button>
+                        <br/>
+                        <button class="button-group" id="share-screen-btn" type="button" disabled>Share Screen</button>
+                        <br/>
+                    </div>
+                </form>
+                <!-- Spotify -->
+                <div id="spotify-player">
+                    <div id="text-box">
+                        <p>Enjoy cafe music to help you focus:</p>
+                    </div>
+                    <iframe src="https://open.spotify.com/embed/playlist/0Gi666YiG1dnm7zvi5Cyq3" width="100%" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+                <!-- Calculator links -->
+                <div>
+                    <a class="calculator-link" href="https://www.desmos.com/scientific">Scientific Calculator</a>
+                    <br/>
+                    <a class="calculator-link" href="https://www.desmos.com/calculator">Graphing Calculator</a>
+                </div>
+                <!-- Pomodoro Timer -->
+                <div id="pomodoro-app">
+                    <div id="pomodoro-container">
+                        <p style="color: white">Pomodoro Timer</p>
+                      <div id="timer">
+                        <div id="time">
+                          <span id="minutes">25</span>
+                          <span id="colon">:</span>
+                          <span id="seconds">00</span>
+                        </div>
+                      </div>
+                      <!-- Buttons for pomodoro timer -->
+                      <div id="buttons">
+                        <button class="pomodoro-button" id="work">Work</button>
+                        <button class="pomodoro-button" id="shortBreak">Short Break</button>
+                        <button class="pomodoro-button" id="longBreak">Long Break</button>
+                        <button class="pomodoro-button" id="stop">Stop</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <!-- Right pane with video players -->
+        <div class="video-group" id="video-pane">
+            <div class="col">
+                <!-- Local video -->
+                <p id="local-player-name" class="player-name"></p>
+                <div id="local-player" class="player"></div>
+            </div>
+            <div class="w-100"></div> 
+            <!-- Remote streams -->
+            <div class="col">
+                <div id="remote-playerlist"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
+    <script src="./index.js"></script>
+    <script src="./pomodoro.js"></script>
+</body>
+</html>
